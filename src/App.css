@@ -5,5 +5,8 @@
 
 .bloodBadge {
   border-radius: 0% 100% 45% 55% / 0% 55% 45% 100%;
-  background-color: red;
+}
+
+.magicMana {
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
 }
