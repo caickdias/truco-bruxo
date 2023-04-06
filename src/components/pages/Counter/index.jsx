@@ -5,12 +5,12 @@ import logo from '../../../assets/white-logo.png';
 import { 
     GAME_POINTS_TO_FINISH, 
     DEFAULT_GAME_POINTS, 
-    POINTS_DIC, 
     INITIAL_POINTS 
 } from '../../../utils/counterConstants';
 import { getBloodPoints, getMagicPoints } from '../../../utils/functions';
 
 import TeamInfo from './TeamInfo';
+import RoundPoints from './TeamInfo/RoundPoints';
 
 
 const index = () => {
@@ -61,9 +61,9 @@ const index = () => {
                 team={team1}
             />
 
-            <button onClick={() => handleAddPoints(1)}>
-                Add point
-            </button>
+            <RoundPoints 
+                onSelectRoundPoints={setRoundPoints}
+            />
 
         </div>
     )

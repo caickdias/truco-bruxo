@@ -1,8 +1,12 @@
 import React from 'react'
 
-const RoundPoints = () => {
+import { POINTS_DIC } from '../../../../utils/counterConstants'
+
+const RoundPoints = ({ onSelectRoundPoints }) => {
   return (
-    <div>RoundPoints</div>
+    <div>
+
+    </div>
   )
 }
 
