@@ -7,7 +7,7 @@ import BloodPoints from './BloodPoints';
 const TeamInfo = ({ team }) => {
   return (    
     <div
-        className='flex flex-col w-full px-8'
+        className='flex flex-col w-full px-4 mt-4'
     >
         <TeamName id={team.id} />
         

@@ -10,7 +10,7 @@ const BloodPoints = ({ bloodPoints }) => {
     const totalBloodPoints = new Array(MAX_BLOOD_POINTS).fill(1);
     
     return(
-        <div className='flex flex-row my-4'>            
+        <div className='flex flex-row mt-2 mb-4'>            
         {
             totalBloodPoints.map((blood, index) => { 
                 return (

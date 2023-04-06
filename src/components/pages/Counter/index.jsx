@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import BloodBadge from '../../badges/BloodBadge'
-import MagicMana from '../../badges/MagicMana'
 
 import logo from '../../../assets/white-logo.png';
 
@@ -24,24 +22,34 @@ const index = () => {
     };
 
     const [roundPoints, setRoundPoints] = useState(DEFAULT_GAME_POINTS);
-    const [team1, setTeam1] = useState({ id: 1, ...defaultTeam});
-    const [team2, setTeam2] = useState({ id: 2, ...defaultTeam});
-    const [team3, setTeam3] = useState({ id: 3, ...defaultTeam});
+    const [teams, setTeams] = useState([
+        { id: 1, ...defaultTeam},
+        { id: 2, ...defaultTeam},
+        { id: 3, ...defaultTeam},
+    ]);
 
-    const handleAddPoints = () => {
-        const newTotalPoints = team1.totalPoints + roundPoints;
+    const team1 = teams.find(team => team.id === 1);
+    const team2 = teams.find(team => team.id === 2);
+    const team3 = teams.find(team => team.id === 3);
 
-        const newTeamPoints = {
-            ...team1,
+    const handleAddPoints = (teamId) => {
+        
+        const selectedTeam = teams.find(team => team.id === teamId);
+        const newTotalPoints = selectedTeam.totalPoints + roundPoints;        
+
+        const newSelectedTeam = {
+            ...selectedTeam,
             totalPoints: newTotalPoints,
             bloodPoints: getBloodPoints(newTotalPoints),
             magicPoints: getMagicPoints(newTotalPoints),
         }
-        setTeam1(newTeamPoints);
+
+        const newTeams = [...teams.filter(team => team.id !== teamId), newSelectedTeam];
+        setTeams([...newTeams]);
     }
 
     return (
-        <div className='flex flex-col w-screen h-screen items-center'>
+        <div className='flex flex-col w-screen h-screen items-center p-4'>
             
             <img 
                 src={logo}
@@ -53,7 +61,7 @@ const index = () => {
                 team={team1}
             />
 
-            <button onClick={handleAddPoints}>
+            <button onClick={() => handleAddPoints(1)}>
                 Add point
             </button>
 
