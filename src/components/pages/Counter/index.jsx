@@ -11,6 +11,7 @@ import {
     INITIAL_POINTS 
 } from '../../../utils/counterConstants';
 import { getBloodPoints, getMagicPoints } from '../../../utils/functions';
+
 import TeamInfo from './TeamInfo';
 
 
