@@ -11,7 +11,7 @@ const MagicPoints = ({ magicPoints }) => {
     const totalMagicPointsIcons = new Array(MAX_MAGIC_POINTS).fill(1);    
 
     return(
-        <div className='flex flex-row mt-4 mb-2 ml-2 gap-2'>            
+        <div className='flex flex-row mt-4 mb-2 gap-2'>            
         {
             totalMagicPointsIcons.map((blood, index) => { 
                 return (

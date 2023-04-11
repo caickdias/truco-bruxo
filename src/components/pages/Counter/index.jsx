@@ -25,17 +25,16 @@ const index = () => {
     const [teams, setTeams] = useState([
         { id: 1, ...defaultTeam},
         { id: 2, ...defaultTeam},
-        { id: 3, ...defaultTeam},
     ]);
 
     const team1 = teams.find(team => team.id === 1);
     const team2 = teams.find(team => team.id === 2);
-    const team3 = teams.find(team => team.id === 3);
 
-    const handleAddPoints = (teamId) => {
+    const handleAddPoints = (action, teamId) => {
         
         const selectedTeam = teams.find(team => team.id === teamId);
-        const newTotalPoints = selectedTeam.totalPoints + roundPoints;        
+        const sign = action === 'remove' ? -1 : 1;
+        const newTotalPoints = selectedTeam.totalPoints + (roundPoints * sign);       
 
         const newSelectedTeam = {
             ...selectedTeam,
@@ -49,16 +48,26 @@ const index = () => {
     }
 
     return (
-        <div className='flex flex-col w-screen h-screen items-center p-4'>
+        <div className='flex items-center justify-around flex-col w-screen h-screen p-4'>
             
-            <img 
-                src={logo}
-                alt="white logo"
-                className='w-36'
+            <div className='-mb-8'>
+                <img 
+                    src={logo}
+                    alt="white logo"
+                    className='w-24'
+                />
+            </div>
+
+            <TeamInfo 
+                id={1}
+                team={team1}
+                onChangeScore={handleAddPoints}
             />
 
             <TeamInfo 
-                team={team1}
+                id={2}
+                team={team2}
+                onChangeScore={handleAddPoints}
             />
 
             <RoundPoints 

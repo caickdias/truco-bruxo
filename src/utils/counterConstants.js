@@ -4,7 +4,7 @@ const BLOOD_POINTS_TO_MAGIC = 5;
 const INITIAL_POINTS = 0;
 
 const POINTS_DIC = {
-    'normal': 1,
+    'comum': 1,
     'truco': 2,
     'duque': 3,
     'bispo': 4
