@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import logo from '../../../assets/white-logo.png';
 
@@ -7,7 +7,7 @@ import {
     DEFAULT_GAME_POINTS, 
     INITIAL_POINTS 
 } from '../../../utils/counterConstants';
-import { getBloodPoints, getMagicPoints } from '../../../utils/functions';
+import { getBloodPoints, getMagicPoints, setTeamPoints } from '../../../utils/functions';
 
 import TeamInfo from './TeamInfo';
 import RoundPoints from './TeamInfo/RoundPoints';
@@ -34,7 +34,7 @@ const index = () => {
         
         const selectedTeam = teams.find(team => team.id === teamId);
         const sign = action === 'remove' ? -1 : 1;
-        const newTotalPoints = selectedTeam.totalPoints + (roundPoints * sign);       
+        const newTotalPoints = setTeamPoints(selectedTeam.totalPoints + (roundPoints * sign));       
 
         const newSelectedTeam = {
             ...selectedTeam,
