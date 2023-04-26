@@ -4,34 +4,39 @@ import Plx from 'react-plx';
 
 import Counter from './components/pages/Counter';
 import Rocks1 from './components/elements/Rocks1';
-import Rocks2 from './components/elements/Rocks2';
+import Rocks2Left from './components/elements/Rocks2Left';
+import Rocks2Right from './components/elements/Rocks2Right';
+import Mountains from './components/elements/Mountains';
+import Sky from './components/elements/Sky';
 
-const parallaxData = [
-  {
-    start: 0,
-    end: 500,
-    properties: [
-      {
-        startValue: 1,
-        endValue: 2,
-        property: "scale",
-      },
-    ],
-  },
-];
+import { rocks1PlxData, rocks2LeftPlxData, rocks2RightPlxData, mountainsPlxData } from '../src/data/parallaxData/heroScene';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='relative h-screen w-screen max-h-screen max-w-screen'>
-      <Plx className='absolute w-full h-full z-50' parallaxData={parallaxData}>
+
+      <Plx className='absolute w-full h-full z-50' parallaxData={rocks1PlxData}>
         <Rocks1 />
       </Plx>
 
-      <Plx className='absolute w-full h-full z-40' parallaxData={parallaxData}>
-        <Rocks2 />
+      <Plx className='absolute w-full h-full z-40' parallaxData={rocks2LeftPlxData}>
+        <Rocks2Left />
       </Plx>
+      
+      <Plx className='absolute w-full h-full z-40' parallaxData={rocks2RightPlxData}>
+        <Rocks2Right />
+      </Plx>
+
+      <Plx className='absolute w-full h-full z-30' parallaxData={mountainsPlxData}>
+        <Mountains />
+      </Plx>
+      
+      <Plx className='absolute w-full h-full z-30' parallaxData={rocks2LeftPlxData}>
+        <Sky />
+      </Plx>
+
+      <div className='absolute top-[2000px]'>opa</div>
     </div>
   )
 }

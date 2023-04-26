@@ -1,15 +1,15 @@
 import React from 'react'
 
-import rocks from '../../assets/rocks-2.png';
+import sky from '../../assets/sky.png';
 
-const Rocks2 = () => {
+const Sky = () => {
   return (
     <img 
-        src={rocks}
+        src={sky}
         alt="rocks 2"
         className='h-full w-full'
     />
   )
 }
 
-export default Rocks2
+export default Sky
