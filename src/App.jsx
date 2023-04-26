@@ -7,7 +7,8 @@ import Rocks1 from './components/elements/Rocks1';
 import Rocks2Left from './components/elements/Rocks2Left';
 import Rocks2Right from './components/elements/Rocks2Right';
 import Mountains from './components/elements/Mountains';
-import Sky from './components/elements/Sky';
+import SkyLeft from './components/elements/SkyLeft';
+import SkyRight from './components/elements/SkyRight';
 
 import { rocks1PlxData, rocks2LeftPlxData, rocks2RightPlxData, mountainsPlxData } from '../src/data/parallaxData/heroScene';
 
@@ -33,7 +34,11 @@ function App() {
       </Plx>
       
       <Plx className='absolute w-full h-full z-30' parallaxData={rocks2LeftPlxData}>
-        <Sky />
+        <SkyLeft />
+      </Plx>
+      
+      <Plx className='absolute w-full h-full z-30' parallaxData={rocks2LeftPlxData}>
+        <SkyRight />
       </Plx>
 
       <div className='absolute top-[2000px]'>opa</div>

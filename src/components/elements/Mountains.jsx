@@ -6,7 +6,7 @@ const Mountains = () => {
   return (
     <img 
         src={mountains}
-        alt="rocks 2"
+        alt="mountains"
         className='h-full w-full'
     />
   )

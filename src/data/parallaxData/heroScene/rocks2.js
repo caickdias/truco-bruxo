@@ -22,6 +22,11 @@ const rocks2LeftPlxData = [
         endValue: TRANSLATEY,
         property: "translateY",
       },
+      {
+        startValue: 1,
+        endValue: 0,
+        property: "opacity",
+      },
     ],
   },
 ];

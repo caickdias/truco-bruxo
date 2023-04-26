@@ -1,15 +1,15 @@
 import React from 'react'
 
-import sky from '../../assets/sky.png';
+import sky from '../../assets/sky-left.png';
 
-const Sky = () => {
+const SkyLeft = () => {
   return (
     <img 
         src={sky}
-        alt="rocks 2"
+        alt="sky left"
         className='h-full w-full'
     />
   )
 }
 
-export default Sky
+export default SkyLeft
