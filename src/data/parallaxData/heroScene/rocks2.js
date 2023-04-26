@@ -14,12 +14,12 @@ const rocks2LeftPlxData = [
       },      
       {
         startValue: 1,
-        endValue: TRANSLATEX * -1 -500,
+        endValue: TRANSLATEX * -1 -2000,
         property: "translateX",
       },
       {
         startValue: 1,
-        endValue: TRANSLATEY,
+        endValue: TRANSLATEY - 500,
         property: "translateY",
       },
       {

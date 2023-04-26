@@ -10,7 +10,8 @@ import Mountains from './components/elements/Mountains';
 import SkyLeft from './components/elements/SkyLeft';
 import SkyRight from './components/elements/SkyRight';
 
-import { rocks1PlxData, rocks2LeftPlxData, rocks2RightPlxData, mountainsPlxData } from '../src/data/parallaxData/heroScene';
+import { rocks1PlxData, rocks2LeftPlxData, rocks2RightPlxData, mountainsPlxData, skyLeftPlxData, skyRightPlxData, logoPlxData } from '../src/data/parallaxData/heroScene';
+import Logo from './components/Logo';
 
 function App() {
 
@@ -33,12 +34,16 @@ function App() {
         <Mountains />
       </Plx>
       
-      <Plx className='absolute w-full h-full z-30' parallaxData={rocks2LeftPlxData}>
+      <Plx className='absolute w-full h-full z-30' parallaxData={skyLeftPlxData}>
         <SkyLeft />
       </Plx>
       
-      <Plx className='absolute w-full h-full z-30' parallaxData={rocks2LeftPlxData}>
+      <Plx className='absolute w-full h-full z-30' parallaxData={skyRightPlxData}>
         <SkyRight />
+      </Plx>
+
+      <Plx className='absolute w-full h-full z-[100]' parallaxData={logoPlxData}>
+        <Logo />
       </Plx>
 
       <div className='absolute top-[2000px]'>opa</div>

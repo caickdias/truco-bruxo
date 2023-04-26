@@ -1,5 +1,5 @@
 const END = 500;
-const TRANSLATEY = 1000;
+const TRANSLATEY = 500;
 const TRANSLATEX = 500;
 
 const mountainsPlxData = [
