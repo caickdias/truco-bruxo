@@ -14,6 +14,9 @@
 .cloud1 {
   animation: animate 19s linear infinite;  
 }
+.cloud2 {
+  animation: animate 27s linear infinite;  
+}
 .cloud3 {
   animation: animate 36s linear infinite;  
 }
@@ -27,5 +30,66 @@
   100%
   {
     transform: translateX(100%);
+  }
+}
+
+.star1 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 1.5s linear infinite;
+}
+.star2 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 2.5s linear infinite;
+}
+.star3 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 0.7s linear infinite;
+}
+.star4 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 1.1s linear infinite;
+}
+.star5{
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 1.4s linear infinite;
+}
+.star6 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 0.9s linear infinite;
+}
+.star7 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 1.6s linear infinite;
+}
+.star8 {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+  animation: animateShootingStars 2s linear infinite;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #000, transparent);
+}
+
+@keyframes animateShootingStars
+{
+  0%
+  {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    transform: rotate(315deg) translateX(-500px);
+    opacity: 0;
   }
 }

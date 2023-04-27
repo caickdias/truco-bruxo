@@ -12,6 +12,7 @@ import SkyRight from '../../components/elements/SkyRight';
 import { rocks1PlxData, rocks2LeftPlxData, rocks2RightPlxData, mountainsPlxData, skyLeftPlxData, skyRightPlxData, logoPlxData } from '../../../src/data/parallaxData/heroScene';
 import Logo from '../../components/Logo';
 import MovingClouds from '../elements/MovingClouds';
+import ShootingStars from '../elements/ShootingStars';
 
 const Hero = () => {
   return (
@@ -46,6 +47,10 @@ const Hero = () => {
       
       <Plx className='absolute w-full h-full z-[100]' parallaxData={logoPlxData}>
         <MovingClouds />
+      </Plx>
+
+      <Plx className='absolute w-full h-full z-0' parallaxData={logoPlxData}>
+        <ShootingStars />
       </Plx>
     </>
   )

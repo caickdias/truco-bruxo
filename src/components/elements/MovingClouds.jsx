@@ -11,11 +11,8 @@ import cloud5 from '../../assets/clouds/cloud5.png';
 const MovingClouds = () => {
   return (
     <div className='absolute top-0 left-0 w-full h-full overflow-hidden z-[100]'>
-        <img className='cloud1 absolute bottom-0 max-w-full' src={cloud1} />
-        
-        <img className='cloud3 absolute bottom-0 max-w-full' src={cloud3} />
-        
-        
+        <img className='cloud1 absolute bottom-0 max-w-full' src={cloud1} />                
+        <img className='cloud3 absolute bottom-0 max-w-full' src={cloud3} />                
     </div>
   )
 }
