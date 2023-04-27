@@ -10,3 +10,22 @@
 .magicMana {
   border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
 }
+
+.cloud1 {
+  animation: animate 19s linear infinite;  
+}
+.cloud3 {
+  animation: animate 36s linear infinite;  
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(100%);
+  }
+}
